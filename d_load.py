@@ -9,7 +9,7 @@ import sys
 def load(file):
     try:
         with open(file) as f:
-            a = f.read().strip().split('\n')
+            a = [l.lower for l in f.read().strip().split('\n')]
 ##            pali = [i.lower() for i in a if i[:]==i[::-1] and len(i)>1]
         
     except:
