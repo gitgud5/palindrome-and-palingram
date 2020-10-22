@@ -16,7 +16,6 @@ def load(file):
         print("You did an oopsie, bad you, I'm gonna stop working now because\
                     my creator didn't know what else to do.")
         sys.exit(1)
-        return
     return a
 
    
