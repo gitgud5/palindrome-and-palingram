@@ -1,15 +1,22 @@
 """
 Load file
 Then return the palindrome words as a list
+Returns Error if found
 
 """
+import sys
 
 def load(file):
-    with open(file) as f:
-        a = f.read().strip().split('\n')
-        pali = [i.lower() for i in a if i[:]==i[::-1] and len(i)>1]
-        return pali
+    try:
+        with open(file) as f:
+            a = f.read().strip().split('\n')
+##            pali = [i.lower() for i in a if i[:]==i[::-1] and len(i)>1]
+        
+    except:
+        print("You did an oopsie, bad you, I'm gonna stop working now because\
+                    my creator didn't know what else to do.")
+        sys.exit(1)
+        return
+    return a
 
-
-
-print(*load('2of12.txt'), sep='\n')
+   
